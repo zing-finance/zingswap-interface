@@ -75,8 +75,7 @@
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
-    "typescript": "^3.8.3",
-    "zingswap-sdk": "^3.0.3"
+    "typescript": "^3.8.3"
   },
   "resolutions": {
     "@walletconnect/web3-provider": "1.1.1-alpha.0"
@@ -106,6 +105,6 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "zingswap-sdk": "^3.0.3"
+    "zingswap-sdk": "^3.0.6"
   }
 }
