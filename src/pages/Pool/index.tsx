@@ -115,7 +115,7 @@ export default function Pool() {
 
       <div style={{ display: 'flex', alignItems: 'center', marginTop: '1.5rem' }}>
         <ButtonSecondary as={Link} style={{ width: 'initial' }} to="/migrate/v1">
-          Migrate V1 Liquidity
+          Migrate TTSwap Liquidity
         </ButtonSecondary>
       </div>
     </>
