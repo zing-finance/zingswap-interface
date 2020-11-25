@@ -2,7 +2,7 @@ import { Currency, ETHER as TT, WETH, ChainId, Token } from 'zingswap-sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
-import xDaiLogo from '../../assets/images/xdai-logo.png'
+import xDaiLogo from '../../assets/images/tt-logo.png'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
