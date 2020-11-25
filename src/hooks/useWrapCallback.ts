@@ -1,4 +1,4 @@
-import { Currency, currencyEquals, ETHER, WETH } from 'uniswap-xdai-sdk'
+import { Currency, currencyEquals, ETHER, WETH } from 'zingswap-sdk'
 import { useMemo } from 'react'
 import { tryParseAmount } from '../state/swap/hooks'
 import { useTransactionAdder } from '../state/transactions/hooks'
@@ -44,7 +44,7 @@ export default function useWrapCallback(
             ? async () => {
                 try {
                   const txReceipt = await wethContract.deposit({ value: `0x${inputAmount.raw.toString(16)}` })
-                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} XDAI to WXDAI` })
+                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} TT to wTT` })
                 } catch (error) {
                   console.error('Could not deposit', error)
                 }
@@ -60,7 +60,7 @@ export default function useWrapCallback(
             ? async () => {
                 try {
                   const txReceipt = await wethContract.withdraw(`0x${inputAmount.raw.toString(16)}`)
-                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WXDAI to XDAI` })
+                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} wTT to TT` })
                 } catch (error) {
                   console.error('Could not withdraw', error)
                 }

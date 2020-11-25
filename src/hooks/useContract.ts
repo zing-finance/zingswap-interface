@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts'
-import { ChainId, WETH } from 'uniswap-xdai-sdk'
+import { ChainId, WETH } from 'zingswap-sdk'
 import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import { useMemo } from 'react'
 import ENS_ABI from '../constants/abis/ens-registrar.json'
@@ -56,9 +56,7 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
   let address: string | undefined
   if (chainId) {
     switch (chainId) {
-      case ChainId.XDAI:
-        address = '0x25D2252Ec30de7830b6825D6b4A08E70a581cD6a'
-        break
+      case ChainId.THUNDERCORE:
       case ChainId.MAINNET:
       case ChainId.GÖRLI:
       case ChainId.ROPSTEN:

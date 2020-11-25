@@ -1,4 +1,4 @@
-import { Currency } from 'uniswap-xdai-sdk'
+import { Currency } from 'zingswap-sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import useLast from '../../hooks/useLast'
 import { useSelectedListUrl } from '../../state/lists/hooks'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Currency, Price } from 'uniswap-xdai-sdk'
+import { Currency, Price } from 'zingswap-sdk'
 import { useContext } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

@@ -27,11 +27,11 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [100]
+  supportedChainIds: [108]
 })
 
 export const walletconnect = new WalletConnectConnector({
-  rpc: { 100: 'https://xdai.1hive.org' },
+  rpc: { 108: 'https://mainnet-rpc.thundercore.com' },
   bridge: 'https://bridge.walletconnect.org',
   qrcode: true,
   pollingInterval: 15000
@@ -45,13 +45,13 @@ export const fortmatic = new FortmaticConnector({
 
 export const portis = new PortisConnector({
   dAppId: PORTIS_ID ?? '',
-  networks: [100]
+  networks: [108]
 })
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'Honeyswap',
+  appName: 'Zingswap',
   appLogoUrl:
     'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg'
 })

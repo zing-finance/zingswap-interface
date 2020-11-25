@@ -1,4 +1,4 @@
-import { ChainId } from 'uniswap-xdai-sdk'
+import { ChainId } from 'zingswap-sdk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
@@ -132,7 +132,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
-  [ChainId.XDAI]: 'xDai'
+  [ChainId.THUNDERCORE]: 'Thundercore'
 }
 
 export default function Header() {

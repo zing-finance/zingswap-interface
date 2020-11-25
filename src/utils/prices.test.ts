@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from 'uniswap-xdai-sdk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from 'zingswap-sdk'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {

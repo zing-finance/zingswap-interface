@@ -1,4 +1,4 @@
-import { ChainId } from 'uniswap-xdai-sdk'
+import { ChainId } from 'zingswap-sdk'
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import Modal from '../Modal'

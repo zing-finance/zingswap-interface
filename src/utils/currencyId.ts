@@ -1,4 +1,4 @@
-import { Currency, ETHER, Token } from 'uniswap-xdai-sdk'
+import { Currency, ETHER, Token } from 'zingswap-sdk'
 
 export function currencyId(currency: Currency): string {
   if (currency === ETHER) return 'ETH'

@@ -1,4 +1,4 @@
-import { Trade, TradeType } from 'uniswap-xdai-sdk'
+import { Trade, TradeType } from 'zingswap-sdk'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Field } from '../../state/swap/actions'

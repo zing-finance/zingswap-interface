@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Pair, Token, Trade } from 'uniswap-xdai-sdk'
+import { Currency, CurrencyAmount, Pair, Token, Trade } from 'zingswap-sdk'
 import flatMap from 'lodash.flatmap'
 import { useMemo } from 'react'
 

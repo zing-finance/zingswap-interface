@@ -78,7 +78,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/1Hive/uniswap-interface'
+const CODE_LINK = 'https://github.com/zing-finance/zingswap-interface'
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>()
@@ -94,11 +94,11 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://about.1hive.org">
+          <MenuItem id="link" href="https://about.zing.finance">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://about.1hive.org/docs/honeyswap">
+          <MenuItem id="link" href="https://swap.zing.finance/docs/zingswap">
             <BookOpen size={14} />
             Docs
           </MenuItem>
@@ -106,11 +106,11 @@ export default function Menu() {
             <Code size={14} />
             Code
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/qPa4h5w">
+          <MenuItem id="link" href="https://t.me/zingfinance">
             <MessageCircle size={14} />
-            Discord
+            Telegram
           </MenuItem>
-          <MenuItem id="link" href="https://info.honeyswap.org/">
+          <MenuItem id="link" href="https://zingswap.info/">
             <PieChart size={14} />
             Analytics
           </MenuItem>

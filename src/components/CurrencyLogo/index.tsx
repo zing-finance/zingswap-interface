@@ -1,4 +1,4 @@
-import { Currency, ETHER as xDai, WETH, ChainId, Token } from 'uniswap-xdai-sdk'
+import { Currency, ETHER as TT, WETH, ChainId, Token } from 'zingswap-sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
@@ -8,7 +8,7 @@ import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
 const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/xdai/assets/${address}/logo.png`
+  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/thundertoken/assets/${address}/logo.png`
 
 const StyledxDaiLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};
@@ -34,7 +34,7 @@ export default function CurrencyLogo({
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
 
   const srcs: string[] = useMemo(() => {
-    if (currency === xDai || currency === WETH[ChainId.XDAI]) return []
+    if (currency === TT || currency === WETH[ChainId.THUNDERCORE]) return []
 
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
@@ -46,7 +46,7 @@ export default function CurrencyLogo({
     return []
   }, [currency, uriLocations])
 
-  if (currency === xDai || currency === WETH[ChainId.XDAI]) {
+  if (currency === TT || currency === WETH[ChainId.THUNDERCORE]) {
     return <StyledxDaiLogo src={xDaiLogo} size={size} style={style} />
   }
 

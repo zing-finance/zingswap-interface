@@ -1,5 +1,5 @@
 import { TransactionResponse } from '@ethersproject/abstract-provider'
-import { JSBI, Token, TokenAmount, WETH, Fraction, Percent, CurrencyAmount } from 'uniswap-xdai-sdk'
+import { JSBI, Token, TokenAmount, WETH, Fraction, Percent, CurrencyAmount } from 'zingswap-sdk'
 import React, { useCallback, useMemo, useState } from 'react'
 import { Redirect, RouteComponentProps } from 'react-router'
 import { ButtonConfirmed } from '../../components/Button'
@@ -111,7 +111,7 @@ function V1PairRemoval({
         </div>
       </LightCard>
       <TYPE.darkGray style={{ textAlign: 'center' }}>
-        {`Your Honeyswap V1 ${
+        {`Your TTSwap ${
           chainId && token.equals(WETH[chainId]) ? 'WETH' : token.symbol
         }/ETH liquidity will be redeemed for underlying assets.`}
       </TYPE.darkGray>

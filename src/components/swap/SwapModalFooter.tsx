@@ -1,4 +1,4 @@
-import { Trade, TradeType } from 'uniswap-xdai-sdk'
+import { Trade, TradeType } from 'zingswap-sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

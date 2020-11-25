@@ -1,30 +1,26 @@
-import { ChainId, JSBI, Percent, Token, WETH } from 'uniswap-xdai-sdk'
+import { ChainId, JSBI, Percent, Token, WETH } from 'zingswap-sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected, walletconnect } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x1C232F01118CB8B424793ae03F870aa7D0ac7f77'
+export const ROUTER_ADDRESS = '0x2C2B1d68281127Eefe46951e5528994ee6B77DC3'
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const USDC = new Token(ChainId.XDAI, '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83', 6, 'USDC', 'USDC on xDai')
-export const HONEY = new Token(ChainId.XDAI, '0x71850b7e9ee3f13ab46d67167341e4bdc905eef9', 18, 'HNY', 'Honey')
-export const XDAI_WETH = new Token(
-  ChainId.XDAI,
-  '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1',
+export const TTUSDT = new Token(ChainId.THUNDERCORE, '0x4f3C8E20942461e2c3Bdd8311AC57B0c222f2b82', 6, 'TT-USDT', 'USDT')
+export const TTETH = new Token(ChainId.THUNDERCORE, '0x6576Bb918709906DcbFDCeae4bB1e6df7C8a1077', 18, 'TT-ETH', 'ETH')
+export const TTWBTC = new Token(ChainId.THUNDERCORE, '0x18fB0A62f207A2a082cA60aA78F47a1af4985190', 8, 'TT-WBTC', 'wBTC')
+export const TTUSDC = new Token(ChainId.THUNDERCORE, '0x22e89898A04eaf43379BeB70bf4E38b1faf8A31e', 6, 'TT-USDC', 'USDC')
+
+export const THUNDERCORE_WETH = new Token(
+  ChainId.THUNDERCORE,
+  '0x02C76383DD003262a595ef20B842fD130F40371C',
   18,
-  'WETH',
-  'Wrapped Ether on xDai'
-)
-export const STAKE = new Token(
-  ChainId.XDAI,
-  '0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e',
-  18,
-  'STAKE',
-  'Stake Token on xDai'
+  'wTT',
+  'Wrapped Thundercore'
 )
 
 const WETH_ONLY: ChainTokenList = {
@@ -33,13 +29,13 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.XDAI]: [WETH[ChainId.XDAI]]
+  [ChainId.THUNDERCORE]: [WETH[ChainId.THUNDERCORE]]
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, HONEY, STAKE]
+  [ChainId.THUNDERCORE]: [...WETH_ONLY[ChainId.THUNDERCORE], THUNDERCORE_WETH, TTUSDT, TTWBTC, TTUSDC, TTETH]
 }
 
 /**
@@ -51,13 +47,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, HONEY, STAKE]
+  [ChainId.THUNDERCORE]: [...WETH_ONLY[ChainId.THUNDERCORE], THUNDERCORE_WETH]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, HONEY, STAKE]
+  [ChainId.THUNDERCORE]: [...WETH_ONLY[ChainId.THUNDERCORE], THUNDERCORE_WETH, TTUSDT, TTWBTC, TTUSDC, TTETH]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {}

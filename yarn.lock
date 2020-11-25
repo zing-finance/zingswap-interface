@@ -14496,19 +14496,6 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
-uniswap-xdai-sdk@^3.0.2-a3:
-  version "3.0.2-a3"
-  resolved "https://registry.yarnpkg.com/uniswap-xdai-sdk/-/uniswap-xdai-sdk-3.0.2-a3.tgz#8c27224ca4fd0cda30c09e816fb7c29e866e27ce"
-  integrity sha512-QV436m/u5yJztqvcadmn2P9AfPtmhFgQ4N6bHqaYbbN2ktyrDtsdXIvVzOnTH9s1gIjjTEmFYOFrwJCN1bR2zA==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
 universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
@@ -15361,3 +15348,16 @@ yauzl@2.10.0, yauzl@^2.10.0:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
+
+zingswap-sdk@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/zingswap-sdk/-/zingswap-sdk-3.0.3.tgz#31d01d46d72a5f6e1531ae63d2d9543f72309c0a"
+  integrity sha512-7S75oRtTRLp/PuAdAbeCsb1uuDssxAd6v+oyFSHK/1HXNDm0F7RKNFlJ4aiNMFS974fUeOMJgxtdHyJ+R/63Hw==
+  dependencies:
+    "@uniswap/v2-core" "^1.0.0"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"

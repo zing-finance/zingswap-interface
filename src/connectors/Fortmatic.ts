@@ -1,11 +1,11 @@
-import { ChainId } from 'uniswap-xdai-sdk'
+import { ChainId } from 'zingswap-sdk'
 import { FortmaticConnector as FortmaticConnectorCore } from '@web3-react/fortmatic-connector'
 
 export const OVERLAY_READY = 'OVERLAY_READY'
 
 type FormaticSupportedChains = Extract<
   ChainId,
-  ChainId.MAINNET | ChainId.ROPSTEN | ChainId.RINKEBY | ChainId.KOVAN | ChainId.XDAI
+  ChainId.MAINNET | ChainId.ROPSTEN | ChainId.RINKEBY | ChainId.KOVAN | ChainId.THUNDERCORE
 >
 
 const CHAIN_ID_NETWORK_ARGUMENT: { readonly [chainId in FormaticSupportedChains]: string | undefined } = {
@@ -13,7 +13,7 @@ const CHAIN_ID_NETWORK_ARGUMENT: { readonly [chainId in FormaticSupportedChains]
   [ChainId.ROPSTEN]: 'ropsten',
   [ChainId.RINKEBY]: 'rinkeby',
   [ChainId.KOVAN]: 'kovan',
-  [ChainId.XDAI]: 'xdai'
+  [ChainId.THUNDERCORE]: 'thundercore'
 }
 
 export class FortmaticConnector extends FortmaticConnectorCore {
