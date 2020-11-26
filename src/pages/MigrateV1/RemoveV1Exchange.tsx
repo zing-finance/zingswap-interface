@@ -151,9 +151,9 @@ export default function RemoveV1Exchange({
       <AutoColumn gap="16px">
         <AutoRow style={{ alignItems: 'center', justifyContent: 'space-between' }} gap="8px">
           <BackArrow to="/migrate/v1" />
-          <TYPE.mediumHeader>Remove V1 Liquidity</TYPE.mediumHeader>
+          <TYPE.mediumHeader>Remove TTSwap Liquidity</TYPE.mediumHeader>
           <div>
-            <QuestionHelper text="Remove your Honeyswap V1 liquidity tokens." />
+            <QuestionHelper text="Remove your TTSwap liquidity tokens." />
           </div>
         </AutoRow>
 

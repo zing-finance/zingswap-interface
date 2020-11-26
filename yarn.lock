@@ -15349,6 +15349,11 @@ yauzl@2.10.0, yauzl@^2.10.0:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
 
+zingswap-default-token-list@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/zingswap-default-token-list/-/zingswap-default-token-list-2.5.0.tgz#e18cce96d4216b5b0ba93a9faaef454f144a4105"
+  integrity sha512-V7I25t5brm1c2n7qLhptx/lf4N138qSxHElL5QhmJ6+h/1TyjXM0vN7gCpViQDjcjglMsD3yJz7HIXXj6+lxvA==
+
 zingswap-sdk@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/zingswap-sdk/-/zingswap-sdk-3.0.6.tgz#89c79feee0353123bfa3fa8d494e50bad470ab3a"

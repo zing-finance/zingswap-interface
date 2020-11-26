@@ -5,9 +5,9 @@
 
 An open source interface for Zingswap -- a decentralized exchange on the Thundercore blockchain.
 
-- Website: [about.1hive.org](https://about.zing.finance/)
-- Interface: [honeyswap.org](https://swap.zing.finance)
-- Docs: [about.1hive.org/docs/](https://swap.zing.finance/docs/zingswap)
+- Website: [zing.finance](https://about.zing.finance/)
+- Interface: [swap.zing.finance](https://swap.zing.finance)
+- Docs: [docs.zing.finance/docs/](https://swap.zing.finance/docs/zingswap)
 - Telegram: [Zing Finance](https://t.me/zingfinance)
 
 ## Accessing the Zingswap Interface
