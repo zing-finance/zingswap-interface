@@ -72,7 +72,7 @@ function V1PairRemoval({
       )
       .then((response: TransactionResponse) => {
         addTransaction(response, {
-          summary: `Remove ${chainId && token.equals(WETH[chainId]) ? 'WETH' : token.symbol}/ETH V1 liquidity`
+          summary: `Remove ${chainId && token.equals(WETH[chainId]) ? 'WETH' : token.symbol}/TT V1 liquidity`
         })
         setPendingRemovalHash(response.hash)
       })
@@ -89,7 +89,7 @@ function V1PairRemoval({
   return (
     <AutoColumn gap="20px">
       <TYPE.body my={9} style={{ fontWeight: 400 }}>
-        This tool will remove your V1 liquidity and send the underlying assets to your wallet.
+        This tool will remove your TTSwap liquidity and send the underlying assets to your wallet.
       </TYPE.body>
 
       <LightCard>
@@ -113,7 +113,7 @@ function V1PairRemoval({
       <TYPE.darkGray style={{ textAlign: 'center' }}>
         {`Your TTSwap ${
           chainId && token.equals(WETH[chainId]) ? 'WETH' : token.symbol
-        }/ETH liquidity will be redeemed for underlying assets.`}
+        }/TT liquidity will be redeemed for underlying assets.`}
       </TYPE.darkGray>
     </AutoColumn>
   )
