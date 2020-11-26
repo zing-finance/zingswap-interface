@@ -84,7 +84,7 @@ export function V1LiquidityInfo({
       </RowBetween>
       <RowBetween mb="1rem">
         <Text fontSize={16} fontWeight={500}>
-          Pooled ETH:
+          Pooled TT:
         </Text>
         <RowFixed>
           <Text fontSize={16} fontWeight={500} marginLeft={'6px'}>
@@ -174,7 +174,7 @@ function V1PairMigration({ liquidityTokenAmount, token }: { liquidityTokenAmount
       )
       .then((response: TransactionResponse) => {
         addTransaction(response, {
-          summary: `Migrate ${token.symbol} liquidity to V2`
+          summary: `Migrate ${token.symbol} liquidity to Zingswap`
         })
         setPendingMigrationHash(response.hash)
       })
@@ -205,12 +205,12 @@ function V1PairMigration({ liquidityTokenAmount, token }: { liquidityTokenAmount
       {!isFirstLiquidityProvider && largePriceDifference ? (
         <YellowCard>
           <TYPE.body style={{ marginBottom: 8, fontWeight: 400 }}>
-            It{"'"}s best to deposit liquidity into Zingswap at a price you believe is correct. If the V2 price seems
+            It{"'"}s best to deposit liquidity into Zingswap at a price you believe is correct. If the Zingswap price seems
             incorrect, you can either make a swap to move the price or wait for someone else to do so.
           </TYPE.body>
           <AutoColumn gap="8px">
             <RowBetween>
-              <TYPE.body>V1 Price:</TYPE.body>
+              <TYPE.body>TTSwap Price:</TYPE.body>
               <TYPE.black>
                 {v1SpotPrice?.toSignificant(6)} {token.symbol}/ETH
               </TYPE.black>
@@ -247,12 +247,12 @@ function V1PairMigration({ liquidityTokenAmount, token }: { liquidityTokenAmount
         <PinkCard>
           <TYPE.body style={{ marginBottom: 8, fontWeight: 400 }}>
             You are the first liquidity provider for this pair on Zingswap. Your liquidity will be migrated at the
-            current V1 price. Your transaction cost also includes the gas to create the pool.
+            current TTSwap price. Your transaction cost also includes the gas to create the pool.
           </TYPE.body>
 
           <AutoColumn gap="8px">
             <RowBetween>
-              <TYPE.body>V1 Price:</TYPE.body>
+              <TYPE.body>TTSwap Price:</TYPE.body>
               <TYPE.black>
                 {v1SpotPrice?.toSignificant(6)} {token.symbol}/ETH
               </TYPE.black>
@@ -349,7 +349,7 @@ export default function MigrateV1Exchange({
       <AutoColumn gap="16px">
         <AutoRow style={{ alignItems: 'center', justifyContent: 'space-between' }} gap="8px">
           <BackArrow to="/migrate/v1" />
-          <TYPE.mediumHeader>Migrate V1 Liquidity</TYPE.mediumHeader>
+          <TYPE.mediumHeader>Migrate TTSwap Liquidity</TYPE.mediumHeader>
           <div>
             <QuestionHelper text="Migrate your liquidity tokens from TTSwap to Zingswap." />
           </div>
